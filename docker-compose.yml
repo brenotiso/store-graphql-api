@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+    api:
+        container_name: store_api_graphql
+        image: store-api-graphql:1.0.0
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        command: yarn run start:prod
+        ports:
+            - 3000:3000
+            - 9229:9229
+        networks:
+            - nesjs-network
+        volumes:
+            - api-data:/usr/src/app
+            - /usr/src/app/node_modules
+        restart: always
+
+networks:
+    nesjs-network:
+
+volumes:
+    api-data:
