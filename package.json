@@ -1,7 +1,7 @@
 {
   "name": "store-graphql",
   "version": "0.0.1",
-  "description": "",
+  "description": "A simple GraphQL API",
   "author": "Breno Tana",
   "private": false,
   "license": "MIT",
