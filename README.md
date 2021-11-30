@@ -2,18 +2,20 @@
 
 ## Descrição
 
-Para a construção da API GraphQL foi utilizado TypeScript, NestJs e TypeOrm, que juntos funcionam muito bem. A estrutura utilizada foia a de [módulos](https://docs.nestjs.com/modules) porposta pelo NestJs, onde cada um dos módulo contém, e pode expor, seus resolvers, services, entidades, repositories e, se necessário, providers diversos.
+Para a construção da API GraphQL foi utilizado TypeScript, NestJs e TypeOrm, que juntos funcionam muito bem. A estrutura utilizada foi a de [módulos](https://docs.nestjs.com/modules) proposta pelo NestJs, onde cada um dos módulo contém, e pode expor, seus resolvers, services, entidades, repositories e, se necessário, providers diversos. Para a construção do schema e da base de dados foi utilizado o conceito de code-first das entidades, onde o TypeOrm gera as migrations e o NestJs constrói o shema.gql.
 
-## Executando a aplicação com [Docker](https://docs.docker.com/get-docker/)
+## Executando a aplicação 
+
+### Com [Docker](https://docs.docker.com/get-docker/)
 ```bash
 # --build caso seja necessário rebuildar a imagem
 $ docker-compose up --build
 ```
-A aplicação estará disponivel em [localhost:3000](http://localhost:3000/graphql/)
+A aplicação estará disponível em [localhost:3000](http://localhost:3000/graphql/)
 
-## Executando a aplicação local
+### Sem Docker
 
-### Instalação
+#### Instalação
 
 ```bash
 # instala as dependências
@@ -23,7 +25,7 @@ $ yarn install
 $ yarn typeorm migration:run
 ```
 
-### Execução
+#### Execução
 ```bash
 # desenvolvimento
 $ yarn run start
@@ -35,7 +37,7 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
-A aplicação estará disponivel em [localhost:3000](http://localhost:3000/graphql/)
+A aplicação estará disponível em [localhost:3000](http://localhost:3000/graphql/)
 
 ## Testes
 
