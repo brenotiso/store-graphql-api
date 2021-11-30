@@ -28,13 +28,13 @@ $ yarn typeorm migration:run
 #### Execução
 ```bash
 # desenvolvimento
-$ yarn run start
+$ yarn start
 
 # hot reload
-$ yarn run start:dev
+$ yarn start:dev
 
 # modo produção
-$ yarn run start:prod
+$ yarn start:prod
 ```
 
 A aplicação estará disponível em [localhost:3000](http://localhost:3000/graphql/)
@@ -42,12 +42,12 @@ A aplicação estará disponível em [localhost:3000](http://localhost:3000/grap
 ## Testes
 
 ```bash
-# Testes unitário
-$ yarn run test
+# Executa os testes unitários
+$ yarn test
 
-# Cobertura do testes unitário (o resultado será gerado em coverage/lcov-report/index.html)
-$ yarn run test:cov
+# Cobertura do testes unitários (o resultado será gerado em coverage/lcov-report/index.html)
+$ yarn test:cov
 
-# Testes e2e
-$ yarn run test:e2e
+# Executa os testes e2e
+$ yarn test:e2e
 ```
